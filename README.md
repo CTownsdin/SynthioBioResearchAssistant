@@ -1,59 +1,80 @@
 # myResearchAssistant
 
-########################
-Run a graphRAG cli query
-########################
+Simple runbook for querying and serving GraphRAG from this repo.
 
-From project root:
+## 0) From project root
 
-## activate venv and view graphrag cli options
-$ source .venv/bin/activate && graphrag query --help
-
-# use graphrag cli to do a local query
-$ graphrag query --method basic -q "What diseases or therapies are discussed in the corpus?" --config settings.yaml --root . -v
-
-# Use the query_runner.py
-python query_runner.py --query "What diseases or therapies are discussed in the corpus?" --verbose
-
-
-#########################
-# Start the flask app api
-#########################
-# 1) New terminal window, then from project root:
+```zsh
 cd /Users/ctown/src/myResearchAssistant
+```
 
-# 2) Activate venv
+## 1) Activate venv
+
+```zsh
+source .venv/bin/activate
+```
+
+## 2) GraphRAG CLI: view help
+
+```zsh
+graphrag query --help
+```
+
+## 3) GraphRAG CLI: basic sanity query
+
+```zsh
+graphrag query --method basic \
+  -q "What diseases or therapies are discussed in the corpus?" \
+  --config settings.yaml --root . -v
+```
+
+## 4) Python helper (global search)
+
+```zsh
+python query_runner.py --query "What diseases or therapies are discussed in the corpus?" --verbose
+```
+
+## 5) Start the Flask API
+
+```zsh
+# new terminal (or tab), then:
+cd /Users/ctown/src/myResearchAssistant
 source .venv/bin/activate
 
-# 3) Install Flask (first time only)
+# first time only
 pip install Flask
 
-# 4) Optional: verbose GraphRAG query logs + CORS for local React
+# optional: verbose GraphRAG query logs + permissive CORS for local UI
 export GRAPHRAG_QUERY_VERBOSE=1
-export CORS_ALLOW_ORIGIN=*
+export CORS_ALLOW_ORIGIN='*'
 
-# 5) Run the app (defaults to http://127.0.0.1:5000)
+# run server (http://127.0.0.1:5000)
 python app.py
+```
 
-# 6) Smoke test it in a new terminal
+Smoke test (from another terminal):
+
+```zsh
 curl -s -X POST http://127.0.0.1:5000/query \
   -H 'Content-Type: application/json' \
   -d '{"question":"What diseases or therapies are discussed in the corpus?"}'
+```
 
+## 6) Start the React Vite UI
 
-#########################
-# Start the React Vite UI
-#########################
-
-# 1) New terminal, go to the web app
+```zsh
+# new terminal
 cd /Users/ctown/src/myResearchAssistant/web
-
-# 2) Install deps (first time only)
 npm install
 
-# 3) Ensure API URL (defaults to http://127.0.0.1:5000; override if needed)
-# For example, if your Flask runs elsewhere:
+# optional: point UI to a custom API URL (defaults to http://127.0.0.1:5000)
 # export VITE_API_URL=http://127.0.0.1:5000
 
-# 4) Start Vite dev server
 npm run dev
+```
+
+---
+
+Notes:
+- Ensure `.env` contains `GRAPHRAG_API_KEY` and do not commit it.
+- Indexing should be completed before querying (artifacts in `output/`).

@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# MacOS
+.DS_Store
+
+# Env & secrets
+.env
+.env.*
+
+# GraphRAG artifacts
+output/
+cache/
+logs/
+
+# Vector stores
+**/lancedb/
+
+# Local clones and scratch
+# graphrag is in external/
+external/
+
+# Node/Frontend
+web/node_modules/
+web/.next/
+web/dist/
+web/build/
+
+# Parquet and data snapshots (if outside output)
+*.parquet
+*.log

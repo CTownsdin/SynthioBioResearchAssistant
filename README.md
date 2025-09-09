@@ -1,3 +1,3 @@
-# SynthioBioResearchAssistant
+# myResearchAssistant
 
 touch smoke test.

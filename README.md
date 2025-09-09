@@ -1,3 +1,2 @@
 # myResearchAssistant
 
-touch smoke test.

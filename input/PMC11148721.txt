@@ -1,0 +1,544 @@
+Title: CFTR genotype analysis of Asians in international registries highlights disparities in the diagnosis and treatment of Asian patients with cystic fibrosis
+
+DOI: 10.1016/j.xcrm.2024.101544
+
+PMCID: PMC11148721
+
+Abstract 1:
+
+Prime editing is a recent, CRISPR-derived genome editing technology capable of introducing precise nucleotide substitutions, insertions, and deletions. Here, we present prime editing approaches to correct L227R- and N1303K-CFTR, two mutations that cause cystic fibrosis and are not eligible for current market-approved modulator therapies. We show that, upon DNA correction of the CFTR gene, the complex glycosylation, localization, and, most importantly, function of the CFTR protein are restored in HEK293T and 16HBE cell lines. These findings were subsequently validated in patient-derived rectal organoids and human nasal epithelial cells. Through analysis of predicted and experimentally identified candidate off-target sites in primary stem cells, we confirm previous reports on the high prime editor (PE) specificity and its potential for a curative CF gene editing therapy. To facilitate future screening of genetic strategies in a translational CF model, a machine learning algorithm was developed for dynamic quantification of CFTR function in organoids (DETECTOR: “detection of targeted editing of CFTR in organoids”).
+
+Abstract 2:
+Graphical abstract
+
+Abstract 3:
+
+•Prime editing can be used to precisely correct cystic fibrosis-causing mutations•Efficient functional correction in patient-derived organoids and airway epithelium•Machine learning tool DETECTOR functionally screens genetic strategies in primary organoids•Genome-wide evaluation of prime editing for L227R and N1303K confirms high fidelity
+
+Prime editing can be used to precisely correct cystic fibrosis-causing mutations
+
+Efficient functional correction in patient-derived organoids and airway epithelium
+
+Machine learning tool DETECTOR functionally screens genetic strategies in primary organoids
+
+Genome-wide evaluation of prime editing for L227R and N1303K confirms high fidelity
+
+Abstract 4:
+
+Bulcaen et al. develop prime editing strategies to correct L227R- and N1303K-CFTR, two drug-ineligible mutations causing cystic fibrosis. Delivery of all components to patient-derived rectal organoids and human nasal epithelial basal cells leads to genetic and functional correction without any detectable off-target editing events.
+
+## Introduction
+
+Cystic fibrosis (CF) is one of the most common inherited lethal diseases and has an estimated worldwide prevalence of >160,000 patients. 1 Perhaps the archetype of an autosomal recessive disorder, CF is caused by biallelic loss-of-function mutations in the CFTR gene. More than 2,000 mutations have been identified, of which >700 have been confirmed to be disease causing. 2 CFTR codes for CF transmembrane conductance regulator, a chloride and bicarbonate channel present in the apical plasma membrane (PM) of cells lining epithelial surfaces. 3 In people with CF (pwCF), loss of CFTR protein production or function manifests as a disrupted water-salt balance in several organs. In the lungs, failure to produce mobile mucus leads to airway obstruction, microbial colonization, chronic inflammation, and progressive lung damage. 3 Tremendous progress has been made since the discovery of the CFTR gene in 1989, 4 , 5 , 6 which has led to the approval of four CFTR modulator therapies over the past 12 years (reviewed in Ensinck and Carlon 7 ).
+
+Highly effective modulator therapies (HEMTs) that aid mutated CFTR protein in folding and gating received market approval for pwCF with at least one F508del allele or another responsive CFTR mutation. F508del constitutes 60%–70% of all alleles in the US and European registries and hence renders all other mutations rare in comparison. 2 However, recent evidence suggest that non-F508del mutations are much more common outside non-Hispanic White populations, where CF incidence is reportedly lower but also underdiagnosed and -documented. 8 , 9 , 10 The next challenge is to design efficient therapies for the many (ultra-)rare CFTR mutations presenting defects that are not efficiently rescued by HEMTs or that are mechanistically not eligible for HEMTs (i.e., nonsense, splicing, or frameshift mutations).
+
+These mutational classes could be targeted by genetic therapies that either supplement wild-type (WT) CFTR nucleic acid sequences or therapies that correct the endogenous alleles. In particular, the implementation of prime editing, a recently developed CRISPR-based system, opens up a new era for treating genetic diseases. The possibility to “rewrite” and correct mutations in situ on patients’ chromosomes offers therapeutic opportunities for monogenic disorders like CF by preserving endogenous gene expression and regulation, as opposed to gene addition approaches (reviewed in Maule et al. 11 ). The prime editor (PE) enzyme leverages the RNA-programmable DNA-targeting ability of Sp Cas9 and merges it with RNA-templated, de novo DNA synthesis performed by a tethered reverse transcriptase. 12 The template for the reverse transcriptase is provided by a 3′ extension on the CRISPR guide RNA (prime-editing guide RNA [pegRNA]), allowing the programming of the in - situ -synthesized DNA strand. The most important advantages of prime editing lie in its capacity to install any nucleotide modification, its inherently high specificity, and its avoidance of double-strand breaks (DSBs). Due to the versatility of the pegRNA design, 97.35% of CF-causing alleles can theoretically be corrected, 2 , 12 bringing new perspectives for mutations that are too rare to be attractive for classical drug discovery development.
+
+Here, we investigate prime editing for L227R and N1303K, two missense mutations in primary models for CF. L227R is an ultra-rare (29 reported alleles) 2 drug-refractory CFTR mutation. With 2,246 reported alleles, N1303K is the fourth most prevalent CF-causing mutation. 2 Of the modulator-ineligible mutations, it is preceded only by G542X, a nonsense mutation leading to premature translation termination. 7 Recent reports, including work from our group, 13 , 14 show only a modest functional rescue with the most efficient modulator combinations for N1303K, currently excluding it from inclusion in the Trikafta US Food and Drug Administration (FDA) label expansion. L227R leads to an even more severe molecular phenotype and was shown to have no response at all to HEMT. 14 This, together with the severe, pancreatic-insufficient phenotypes, underscores the high unmet medical need of these patient groups.
+
+## Results
+
+## Prime-editing strategies correct the c.680 T>G (L227R) CFTR mutation
+
+To correct L227R at the genomic DNA level, 20 different pegRNAs were designed based on the four closest protospacer adjacent motif (PAM) sites and a matrix of different primer binding site (PBS) and reverse-transcription template (RTT) lengths ( Figures 1 A, 1B, and S1 A). These combinations included high-ranked PBS-RTT lengths designed by available prediction algorithms 15 , 16 , 17 ( Table S1 ). The pegRNAs were tested individually (PE2 approach) as well as in combination with a nicking guide RNA (ngRNA; PE3 strategy) ( Figure 1 A), as this has been shown to promote incorporation of the installed edit onto the non-edited DNA strand. 12 , 18 Where possible, PE3b ngRNAs were chosen. These guides contain the target base, i.e., the WT CFTR base, in the spacer sequence. Such ngRNAs nick the target sequence only once the pegRNA has completed installation of the desired edit on the opposite strand. The sequential actions of pegRNA and ngRNA lead to increased efficiency and reduced on-target insertion or deletion (indel) formation compared to non-sequential nicking strategies (PE3a). 12 To assess different pegRNA and ngRNA combinations, we transfected guide-encoding plasmids into engineered HEK293T cell lines stably expressing a single integrated pCMV-3HA-L227R- CFTR DNA expression cassette. Sanger sequencing and subsequent EditR analysis 19 showed that 12 pegRNAs delivered significant corrections, with the highest levels of correction observed for pegRNA+13C>A (10–19 bp PBS-RTT) ( Figures 1 C and S1 B). Combining pegRNA+13C>A with a PE3b ngRNA (ngRNA-2) led to a mean correction of 25% ± 8% of alleles, corresponding to a 1.6-fold increase in editing compared to the pegRNA alone ( Figure 1 C). Sanger sequencing was confirmed by next-generation sequencing (NGS) analysis of the same locus ( Figures S1 C–S1E). Figure 1Prime editing of c.680T>G (L227R) rescues CFTR glycosylation, PM localization, and anion channel function(A) PE3 strategies require delivery of the prime editor (PE) enzyme, prime editing guide (pegRNA), and nicking guide RNA (ngRNA). pegRNAs consist of a spacer, single guide RNA (sgRNA) scaffold, reverse-transcriptase template (RTT), and primer binding site (PBS) sequences.(B) L227R locus with pegRNA+13C>A designs designed to reverse c.680T>G.(C) DNA correction in 3HA-L227R-CFTR HEK293T cells following plasmid transfection of different pegRNAs and prime editing strategies (PE2 vs. PE3). Tukey’s multiple comparisons test did not reveal significant differences between the best-performing +3G>T and +13C>A pegRNAs.(D) Percentage of cells with PM-localized CFTR correlates with CFTR correction on DNA level. Spearman correlation r = 0.8182, p < 0.0001. PM staining and flow cytometry using antibodies against the extracellular 3HA tag of 3HA-L227R-CFTR HEK293T cells.(E) Percentage of 3HA-L227R-CFTR HEK293T cells positive for PM-CFTR following plasmid transfection of different pegRNAs and prime editing strategies (PE2 vs. PE3).(F) Western blot of CFTR-negative (NT), control- or L227R PE3-treated 3HA-L227R-CFTR, or wild-type (WT)-CFTR HEK293T cell lines. Bands B and C, respectively, represent core- and complex-glycosylated CFTR.(G) Immunocytochemistry staining and confocal microscopy of HEK293T NT, control or L227R-targeted 3HA-L227R-CFTR, and 3HA-WT-CFTR cells. DAPI-stained nuclei are represented in blue, and labeling of extracellular 3HA-CFTR is shown in green.(H) Halide-sensitive yellow fluorescent protein (HS-YFP) quenching assay in NT or L227R- or WT-CFTR HEK293T cells treated with L227R-targeting or control PE3 approaches. Traces and error bars represent n = 3 biological repeats.(I) CFTR function is calculated as 1−F/F0 (with F0 = fluorescence at point of iodide buffer injection) with subtraction of quenching in NT cells (aspecific/background) and relative to WT-CFTR HEK293T cells. Control PE3 = non-CFTR-targeting pegRNA + ngRNA (RNF2 locus). Tukey’s multiple comparisons test was used to compare experimental conditions. All data are presented as mean ± S.D. ∗p < 0.05, ∗∗p < 0.01, ∗∗∗p < 0.001, or ∗∗∗∗p < 0.0001.
+
+## Prime editing of L227R effectively restores CFTR trafficking, glycosylation and function in HEK293T
+
+We found that L227R-CFTR presents with a severe processing defect, as evidenced by the absence of the fully glycosylated Golgi- and post-Golgi fraction (so called mature CFTR, “band C”) on western blot and the absence of detectable CFTR at the PM ( Figures 1 D–1G). Treatment with the optimized PE3 strategy rescued the processing defect of L227R, shown by restoration of band C ( Figure 1 F). CFTR maturation, calculated as band C/total CFTR relative to the ratio observed in HEK293T-WT-CFTR, was 42.27% ± 17.4% in the polyclonally edited cell pool ( Figure S1 F). The 3HA tag positioned in extracellular loop 4 of CFTR in the 3HA-L227R-HEK293T model allows sensitive immunocytochemistry staining of PM-CFTR and was previously shown not to interfere with CFTR trafficking and folding. 20 The recovered CFTR maturation shown on western blot corresponded to the appearance of cells displaying PM-localized 3HA-CFTR on confocal images ( Figure 1 G). Flow cytometric analysis indicated that 31.07% ± 13.87% of cells were positive for PM-CFTR when treated with PE3 targeting the L227R mutation ( Figure 1 E). The level of protein rescue (i.e., the percentage of PM-CFTR-positive cells) correlated with DNA correction, suggesting that precise CFTR correction led to CFTR maturation and rescue of subcellular localization ( Figure 1 D, Spearman correlation r = 0.82, p < 0.0001). Finally, because PM localization is required for, but does not guarantee, proper gating and ion channeling, CFTR function was evaluated through halide-sensitive yellow fluorescent protein (HS-YFP) quenching. Influx of iodide through CFTR leads to rapid quenching of HS-YFP, allowing us to quantify CFTR activity. 20 , 21 In line with DNA and protein correction levels, use of the optimized PE3 approach showed 24.80% ± 7.74% functional correction relative to WT ( Figures 1 H and 1I).
+
+## Prime-editing strategies correct the c.3909 C>G (N1303K) mutation
+
+To investigate prime editing for N1303K, a second and more common mutation, we designed 16 pegRNAs based on two PAM sites and 4 different ngRNAs ( Figure S2 A). Two of these ngRNAs (ngRNA-1, ngRNA-2) classify as PE3b ngRNAs and the remaining as PE3a strategies. 12 Analogous to our approach for L227R, we tested different pegRNA-ngRNA combinations in a 3HA-N1303K-CFTR HEK293T stable cell line. Of these, pegRNA+13C>G (14–18 bp PBS-RTT) induced editing levels up to 27.3%± 4.2% when combined with ngRNA-1 ( Figures 2 A and S2 B–S2D). Of note, the PE3b approach using ngRNA-1 on average increased PE efficiencies 3.17-fold compared to the respective pegRNA alone ( Figure S2 E). The other ngRNAs did not significantly increase correction. ngRNA-1 positions the C>G correction in the PAM-proximal region (seed region) of its spacer, in contrast to ngRNA-2, where the desired edit is part of the PAM-distal spacer region (non-seed). Figure 2Prime editing of c.3909C>G (N1303K) rescues CFTR glycosylation, PM localization, and channel function(A) DNA correction in 3HA-N1303K-CFTR HEK293T cells following plasmid transfection of different pegRNAs and prime-editing strategies (PE2 vs. PE3).(B) Western blot of CFTR-negative (NT), 3HA-N1303K-CFTR, or WT-CFTR HEK293T cell lines treated with control PE3, N1303K PE3, elexa-teza-ivacaftor (ETI; 3 μM of each, 24 h incubation), or DMSO control. Bands B and C respectively represent core- and complex-glycosylated CFTR.(C) Immunocytochemistry staining and confocal microscopy of HEK293T NT, 3HA-WT-CFTR, and control- or N1303K-PE3-treated 3HA-N1303K-CFTR cells. DAPI-stained nuclei are represented in blue, and labeling of extracellular 3HA-CFTR is shown in green.(D) Percentage of PM-CFTRhigh+ PE3-treated 3HA-N1303K-CFTR cells relative to WT. High+ cells were gated based on non-treated 3HA-N1303K HEK293T cells. Gating strategy is shown in Figure S2H.(E) HS-YFP quenching assay of control- or N1303K PE3-treated HEK293T expressing no CFTR (NT), N1303K-CFTR, or WT-CFTR. CFTR function is calculated as 1-F/F0 (with F0 = fluorescence at point of iodide buffer injection) with subtraction of quenching in NT cells (aspecific/background) and relative to WT-CFTR HEK293T cells. Control PE3 = delivery of non-CFTR-targeting pegRNA + ngRNA (RNF2 locus). All data points reflect biological replicates, presented as mean ± SD. Tukey’s multiple comparisons test was used to compare experimental conditions. ∗p < 0.05, ∗∗p < 0.01, ∗∗∗p < 0.001, or ∗∗∗∗p < 0.0001.
+
+## Prime editing of N1303K effectively restores CFTR trafficking, glycosylation, and function
+
+N1303K is traditionally classified as a class II processing mutant, although we and others have reported an additional severe gating defect. 13 , 22 , 23 , 24 HEK293T cells overexpressing 3HA-N1303K-CFTR recapitulate these phenotypes 13 and allow us to investigate in a first step whether prime editing can correct these known molecular defects. At baseline, western blot and extracellular labeling of CFTR show small amounts of complex glycosylated CFTR (band C) and limited PM localization but no residual ion channel function as measured by HS-YFP quenching ( Figures 2 B–2E). Treatment with the optimized PE3 combination resulted in a substantial increase in mature CFTR (50.30% ± 15.46% band C/total CFTR relative to HEK293T-WT-CFTR cells), whereas such rescue was not obtained with the triple modulator combination (elexa-, teza-, ivacaftor [ETI]) ( Figures 2 B and S2 F). Similarly, staining against the extracellular 3HA tag indicated substantial rescue of 3HA-N1303K-CFTR trafficking by prime editing. This was evidenced by cells presenting with a high, WT-like CFTR PM density on confocal microscopy ( Figure 2 C) and quantified by flow cytometry, resulting in 30.5% ± 3.7% of gene corrected, CFTR high+ cells ( Figures 2 D and S2 H). Lastly, CFTR function was also rescued, resulting in 22.47% ± 5.54% HS-YFP quenching relative to WT-CFTR ( Figures 2 E and S2 I).
+
+## Improving prime-editing efficiency by enhanced pegRNA and prime-editing designs
+
+Because PE activity requires an intact PBS to prime the tethered RT, outcome efficiency can be critically hampered by the degradation of the unprotected 3′ ends of pegRNAs by intracellular exonucleases. 25 We evaluated whether the addition of a 3′ “capping” motif 25 could increase our editing levels. For both mutations, such engineered pegRNAs (epegRNAs; 3′ tevopreQ1-motif) outperformed the original pegRNAs, leading to 21.0% ± 6.5% editing for L227R and 43.3% ± 10% editing for N1303K, corresponding to 1.49- and 1.33-fold increases, respectively ( Figure S3 A).
+
+Because PE achieves gene correction through a three-DNA-strand intermediate, modulation of DNA mismatch repair (MMR) can be used to beneficially impact prime-editing outcomes. 26 , 27 For N1303K, we investigated the addition of three extra synonymous MMR-evading mutations. Sequencing chromatograms showed efficient installation of the additional silent mutations, but overall editing efficiency in this model was not increased ( Figures S3 B and S3D). For L227R, we introduced a silent PAM-disrupting mutation but also here no increase in editing efficiency was observed ( Figures S3 B and S3C). Lastly, we also evaluated the PE5max system, 26 which leverages a dominant-negative MLH1 (MLH1dn) to suppress MMR activity together with an optimized PE-enzyme (PEmax). MLH1 is a key effector of the MMR pathway, which has been shown to negatively impact the prime-editing outcomes. 27 , 28 In HEK293T, the use of PE5max resulted in similar efficiencies to PE3 in the same model ( Figure S3 E).
+
+## Prime editing of the endogenous CFTR locus in rectal organoids derived from pwCF restores CFTR function
+
+To validate our prime editing approach, we transitioned to primary cells from CF donors. Rectal organoids have been established as a highly translational model for CFTR function and allow to reliably predict the efficacy of therapeutic strategies. 29 CFTR activation through the addition of forskolin leads to rapid volumetric expansion of these organoids 30 (forskolin-induced swelling [FIS], Figure 3 A), providing a functional platform to study CFTR gene correction. 31 , 32 , 33 , 34 For CFTR modulators, FIS responses correlate with non-gastrointestinal clinical endpoints in pwCF, including lung function. 35 , 36 Upon treatment of L227R organoids with ETI, no improvement in CFTR function was detected, underscoring its drug-refractory nature ( Figures S4 A and S4B). N1303K showed a moderate response to ETI, as reported before 13 ( Figures S4 A and S4B). Figure 3Prime editing of the endogenous CFTR locus restores CFTR function in patient-derived rectal organoids(A) Forskolin-induced swelling (FIS) in rectal organoids is a CFTR-dependent/-specific phenotype and hence well suited to evaluate functional correction after prime editing.(B) Representative images from FIS experiments in organoids homozygous for L227R or N1303K transduced with lentiviral vectors (LVs) encoding PE enzyme, pegRNA, and ngRNA.(C) To assess individual organoid swelling, a machine learning-based algorithm was developed: DETECTOR (detection of targeted editing of CFTR in organoids). The tool first counts all organoids and subsequently evaluates the number of swelling organoids based on an image that overlays individual organoid areas at the start and end of the FIS assay (difference image).(D) Percentage of FIS-responsive organoids (determined by DETECTOR) in samples from patients homozygous or heterozygous for L227R treated by LV-delivered PE3 approaches. Unpaired parametrical t test with Welch’s correction was used to compare groups.(E) Percentage of FIS-responsive organoids (determined by DETECTOR) in samples from patients homozygous or heterozygous for N1303K. Mann-Whitney U t test was used to compare groups.(F) Percentage of FIS-responsive organoids following co-transduction of LVs containing PE, pegRNA, and ngRNA with an LV expressing MLH1dn (PE5 strategy) in organoids homozygous or heterozygous for N1303K. Unpaired parametrical t test was used to compare groups. Bars represent the mean of two biological replicates measured as technical octuplicates. Control PE3 = delivery of non-CFTR-targeting PE3 approach (RNF2 locus). ∗p < 0.05, ∗∗p < 0.01, ∗∗∗p < 0.001, or ∗∗∗∗p < 0.0001.
+
+To evaluate prime editing efficiency in pwCF-derived rectal organoids, we delivered PE together with optimized pegRNAs and ngRNAs via lentiviral vectors (LVs). For both genotypes (homozygous and compound heterozygous samples), treatment with mutation-specific pegRNAs led to the growth of organoids with a clear lumen and swelling after forskolin stimulation ( Figure 3 B), underlining that also in primary cells, prime editing restores CFTR function. Analysis of the L227R- and N1303K-encoding loci indicated efficient and precise introduction of the nucleotide substitutions ( Figures S4 C and S4D). Although prime editing was overall accurate, deep sequencing (>2 million reads/amplicon) uncovered infrequent undesired alleles (indels) in some of the most efficiently edited samples ( Figures S4 E and S4F).
+
+## ML-based detection to precisely determine functional correction in organoids
+
+Quantification of the organoid response to CFTR modulators in the FIS assay is typically based on the increase in total organoid surface area measured over a fixed period of time. 30 , 37 This is a valid approach since responses to small molecules are relatively homogeneous. For gene editing approaches, however, responses of individual organoids are binary (CF or WT phenotype). Hence, increases in total organoid surface are less informative and easily biased by the size of (un)responsive organoids ( Figures S4 G and S4H). To circumvent arduous manual inspection and quantification, we developed a software tool that allows automated and label-free analysis of the effect of genetic therapies based on individual organoid phenotype. DETE CT OR (detection of targeted editing of CFTR in organoids) is a machine learning (ML)-based image processing algorithm capable of analyzing dynamic, large-scale, bright-field microscopy data ( Figure 3 C). DETE CT OR employs two parallel ML models to first count and subsequently evaluate swelling in individual organoids ( Figures S4 I and S5 A). The counting and swelling models were trained on 18.499 and 4.093 labeled structures, respectively, and achieved 94% (MAE = 5.20%, MSE = 6.31%) and 85% (AP 50 = 0.85) accuracy compared to manual analysis. To validate the model further, N1303K homozygous organoids were pre-treated with ETI and stimulated with 5 μM forskolin, a therapy that should lead to detectable swelling in all organoids. DETE CT OR flagged 103% ± 13% as positive, while 0% ± 0% swelling organoids were detected in the DMSO control ( Figure S5 B). Note that DETE CT OR flags all organoids with any swelling phenotype regardless of their relative size increase. Consequently, DETE CT OR is well fit for the evaluation of gene editing outcomes but not for continuous modulator responses.
+
+## MMR modulation enhances prime-editing outcomes in patient-derived rectal organoids
+
+Next, we leveraged DETE CT OR to functionally dissect different prime editing approaches in primary cells harboring one or two L227R or N1303K alleles ( Figures 3 D and 3E). The L227R-targeting PE3b approach (PE + pegRNA + ngRNA) compared to PE2 (PE + pegRNA) delivered a 4.99-fold increase in swelling of L227R homozygous organoids ( Figure S5 C). Use of the tevopreQ1-epegRNA architecture combined with PE3b further increased the frequency of phenotype-corrected organoids up to 80.0% ± 13.8% for L227R and 27.3% ± 8.3% for N1303K organoids ( Figures 3 D and 3E). Consistent with results in HEK293T, the introduction of a synonymous PAM disruption mutation for L227R did not increase the number of FIS-responsive organoids ( Figure S5 D).
+
+Since primary organoids are MMR proficient ( Figure S5 E), both MMR-evading epegRNA designs as well as PE4/PE5 approaches were investigated. Interestingly, epegRNAs encoding additional silent edits, alongside the desired N1303K correction, improved editing in a PE2, but not a PE4, setup ( Figure S5 F). In quadruple transduction experiments using an additional LV expressing MLH1dn (PE + epegRNA + ngRNA + MLH1dn), DETE CT OR recorded an average 2.16-fold increase in functional correction compared to the triple transduction PE3b condition, leading to 45.7% ± 15.1% of functionally corrected organoids ( Figure 3 F). Use of PEmax instead of the PE2 enzyme did not further increase editing efficiencies ( Figure S5 G).
+
+Measuring the same organoids in a second FIS assay 1 week after the first (i.e., 3 weeks post-transduction) showed that the functional correction is durable, in contrast to modulator-induced responses ( Figure S5 H). When combining data from all evaluated PE systems (i.e., PE2-PE3b-PE4-PE5, PEmax, pegRNA-epegRNA, MMR-evading silent edits), the functional response reported by DETE CT OR correlated with the observed percentages of DNA correction ( Figure S5 I, Pearson r = 0.78, p < 0.0001, for L227R).
+
+## Prime editing of the endogenous CFTR locus restores CFTR function in patient-derived airway epithelia
+
+Although CF is a systemic disease, morbidity and mortality mainly stem from lung pathology, and hence the airway epithelium is currently the primary target for CF gene replacement or gene editing therapy. To evaluate whether prime editing would also allow us to functionally correct CFTR mutations in the airway epithelium, we engineered the parental 16HBE14o- (human bronchial epithelial) cell line, as well as 16HBEgeN1303K that contains the mutation in the endogenous CFTR gene, 38 to express a single integrated HS-YFP cassette ( Figure S6 A). Upon LV-mediated delivery of the optimized PE3max approach, 23.68% ± 2.31% CFTR DNA correction was detected in 16HBEgeN1303K-YFP and 37.33% ± 6.35% in 16HBEgeN1303K-MLH1dn-YFP ( Figure 4 A). These editing levels corresponded to 10.8% ± 0.2% and 20.3% ± 4.3% HS-YFP quenching relative to WT ( Figures 4 A and S6 B). The difference observed in DNA editing and functional rescue can be attributed to the fact that 16HBEgeN1303K is homozygous for the N1303K mutation but only possesses one functional CFTR allele. 38 , 39 Next, we delivered all three PE components to patient-derived human nasal epithelial (HNE) basal cells with L227R/L227R, N1303K/R1162X, N1303K/N1303K, or WT genotypes through LV delivery. HNEs were differentiated at the air-liquid interface (ALI) and functionally evaluated through Ussing chamber short-circuit current measurements 4 weeks post-transduction ( Figures 4 B–4E, S6 C–S6G, S7 A, and S7B). PE3-treated L227R cultures displayed forskolin-induced currents of 13.3 ± 2.6 μA/cm 2 ( Figure 4 D) that were completely inhibited by Inh172 (14.0 ± 4.1 μA/cm 2 ), a specific CFTR inhibitor. PE3-treated N1303K cultures showed a CFTR functional rescue, albeit modest at 1.03 ± 0.32 μA/cm 2 ( Figure 4 E). The CFTR currents measured in prime edited epithelia derived from L227R and N1303K donor samples, respectively, corresponded to 29.4% and 2.3% relative to the average currents measured in cells derived from WT donors. In these experiments, PE5 did not significantly increase functional rescue. Interestingly, the highest levels of genomic HNE correction that we could detect were 1.27% ± 0.29% and 0.57% ± 0.56% for L227R and N1303K, respectively ( Figures S7 C–S7E). A clear correlation was observed between genomic and functional correction of the cultures that responded to the prime editing therapy (r = 0.93, p = 0.003; Figure S7 F). Figure 4Prime editing of the endogenous CFTR locus restores CFTR function in 16HBE and primary nasal epithelial cells(A) DNA correction and correction of CFTR function in engineered 16HBEgeN1303K-YFP and 16HBEgeN1303K_MLH1dn-YFP cells transduced with LVs encoding PE enzyme, engineered pegRNA (epegRNA), and ngRNA. CFTR function was determined by HS-YFP quenching and calculated as 1-F/F0 (with F0 = fluorescence at point of iodide buffer injection) relative to WT 16HBE-YFP cells.(B and C) Representative short-circuit currents (Isc) of human nasal epithelial (HNE) cells with L227R/L227R (B) or N1303K/R1162X (C) genotypes. HNEs were transduced with LVs containing PE3 or PE5 components and subsequently differentiated at the air-liquid interface (ALI). Arrows indicate the addition of 100 μM 3-isobutyl-1-methylxanthine (IBMX) + 10 μM forskolin (Fsk) or 10 μM Inh172.(D and E) Quantified CFTR-dependent Isc (ΔFsk/IBMX and ΔInh172) for PE3 or PE5 of (D) L227R homozygous and WT HNEs and (E) N1303K/N1303K, N1303K/G1182X, and WT HNEs. Bars represent n = 5 or n = 3 biological repeats, and error bars represent SD. WT HNEs are the same in (D) and (E). Tukey’s multiple comparisons test was used to compare experimental conditions. Control PE3/PE5 = delivery of non-CFTR-targeting pegRNA + ngRNA (RNF2 locus).
+
+## Prime editing corrects CF-causing mutations with high fidelity
+
+To verify the specificity of the optimized epegRNAs and ngRNAs for L227R and N1303K, we used computational as well as experimental methods to identify genomic sites with increased propensity for off-target (OT) Sp Cas9 binding and editing. First, we used CRISPOR 40 to predict and rank potential OT sites based on their cutting frequency determination score 41 ( Table S4 ). Next, to experimentally identify sites prone to Sp Cas9-dependent aspecific activity, we performed an unbiased whole-genome OT analysis method, GUIDE-seq (GS), 42 in HEK293T cells with catalytically active Sp Cas9 nuclease. For L227R, three and nine OT sites were identified by GS for the optimized epegRNA and ngRNA, respectively ( Figure 5 A; Table S4 ). For N1303K, one and three OT sites were detected for the optimized epegRNA and ngRNA, respectively ( Figure 5 B; Table S4 ). Multiple OT sites found via GS were also among those flagged by CRISPOR. We selected all OT sites identified through GS, as well as the highest ranked CRISPOR OTs, for further in-depth genetic analysis in HEK293T cells treated with PE3. Targeted deep sequencing on these sites in PE-treated HEK293T-L227R/N1303K-CFTR cells showed no editing at the expected nick sites in L227R/N1303K PE3 or control samples ( Figures 5 C and 5D). On the position of the PE-encoded edit, no significant events were detected at any of the OT sites, whereas clear introduction of the correction was found at the intended target sites within CFTR ( Figures S8 A–S8D). Figure 5Off-target profiling of L227R and N1303K prime-editing guides(A and B) Potential SpCas9 off-target sites identified through GUIDE-seq in HEK293T cells using SpCas9 combined with (A) L227R and (B) N1303K pegRNAs and ngRNAs.(C and D) Targeted deep sequencing on potential off-target sites identified by in silico prediction and/or GUIDE-seq. HEK293T samples were collected 3 days after transfection. Organoid samples were harvested 14 days post-transduction. Bars represent mean percentage of modified reads evaluated at expected nick site ± SD of two biological replicates. Control PE3/PE5 = delivery of non-CFTR-targeting pegRNA + ngRNA (RNF2 locus).
+
+Because prime editing and hence also potential OT prime editing can be affected by cell-specific expression of DNA damage repair (DDR) machinery, we repeated deep sequencing in organoid samples that displayed high functional correction ( Figures 5 C and 5D). Again, we found no evidence of PE activity at the investigated sites.
+
+## Discussion
+
+Considering the monogenic and serious nature of CF, CFTR was among the first targets to be investigated for therapeutic correction by canonical Sp Cas9 editing and subsequent homology-directed repair (HDR). In initial studies, editing efficiencies were too low for clinical application, 43 , 44 but recently, editing efficiencies >40% have been achieved and can be further increased by ex vivo enrichment of edited cells. 45 , 46 However, Cas9/HDR approaches are critically cell-cycle dependent, limiting the in vivo application of this approach. Furthermore, they require the introduction of a DSB, an event that can lead to genotoxicity. 47 , 48 , 49 , 50 Aside from HDR strategies which can theoretically be applied to any given mutation, targeted CRISPR-Cas approaches were previously limited to two subsets of mutations: intronic splicing mutations that can be disrupted using cleaving Cas orthologs and nonsense or canonical splice site mutations that can be more precisely reverted by base editing, 51 together covering ∼1/3 of known CF-causing variants (32.26%). 2
+
+Prime editing, on the other hand, is theoretically capable of correcting all base conversions and small indels, covering 97.35% of all CF-causing variants. 2 , 12 In our study, we report on the successful prime editing of the L227R and N1303K mutations. Both lead to severe CFTR defects, are currently ineligible for available modulators, and are caused by base transitions that cannot be corrected using base editing or DSB approaches without HDR. We optimized pegRNA design in HEK293T cells stably expressing 3HA-L227R/N1303K- CFTR and showed that DNA correction of either mutation led to restored protein glycosylation, PM localization, and function.
+
+It is, however, important to recognize that PE is not a stand-alone effector: PE merely installs a complex three-strand DNA intermediate that ought to be resolved by target cell DDR machinery. Consequently, prime editing is critically dependent on the expression and activity of several host factors. 25 , 26 , 27 , 52 HEK293T cells are a straightforward model to investigate the functionality of different pegRNA designs 18 and prime editing strategies, but they might not accurately represent the expression and organization of PE-impacting host factors found in primary cells. To validate prime editing in a more translational model, PE and guideRNAs were delivered to rectal organoids derived from pwCF. These organoids are a well-established model in the CF field, shown to robustly predict patient responses to CFTR-targeting therapies. 29 , 36 Prime editing in intestinal organoids has been previously reported by Geurts et al. and Schene et al. but required clonal outgrowth and/or selection to detect DNA correction. 53 , 54 In our work, through pegRNA design optimization in HEK293T cells, careful dissection of recent prime editing innovations, and LV-mediated delivery into primary cell models, we achieved up to 34% genomic CFTR correction resulting in up to 80% functionally rescued organoids. The correction levels were measured 2 weeks after a single treatment and without any form of selection.
+
+Next, the developed prime-editing strategies were also delivered to 16HBE and pwCF-derived HNE airway epithelial cells. In both models, genetic correction led to significant correction of CFTR function. In 16HBEgeN1303K expressing HS-YFP, a quenching of 20.3% ± 4.3% relative to WT was observed for N1303K. In ALI-differentiated HNE from pwCF, short-circuit current measurements detected 2.3% and 29.4% functional correction (relative to WT) for N1303K and L227R, respectively. Previous studies with modulators on pwCF-derived HNE predicted that currents as low as 5%–10% of WT are sufficient to deliver clinical improvements measured as forced expiratory volume in 1 s. 55 , 56 , 57 , 58 In differentiated epithelial cells homozygous for L227R, the meaningful correction (∼30% of WT) was caused by only 1.27% ± 0.29% of precise gene editing. These data thereby suggest that correction of CFTR in only a small percentage of airway epithelial cells can lead to a meaningful increase in CFTR function, a promising indication for future CF genetic therapies.
+
+Because validation of prime editing in primary, pwCF-specific models is crucial to understand its impact toward clinical translation, we set out to develop a computational tool for functional organoid gene editing analysis. Following the increasing use and relevance of organoids in medical research, multiple analysis tools have been developed. 59 , 60 , 61 , 62 These tools are, however, not equipped to analyze swelling of individual organoids specifically. We therefore developed DETE CT OR, an ML-based algorithm. DETE CT OR detects organoids that gain the typical CFTR-dependent lumen formation and swelling and applies a binary label (swelling or non-swelling). Unlike regular surface-based FIS analysis, DETE CT OR is not critically dependent on an increase in organoid surface area and is hence able to handle pre-swelling that may arise from early gene correction and restored endogenous CFTR function. DETE CT OR was also trained to detect organoids that expand little in size but clearly obtain a lumen, rendering it a useful tool for evaluating CFTR gene editing or other CFTR -targeting therapies. Although HEK is still the preferred model for setting up prime-editing strategies, screening in primary models might ultimately be more relevant, and AI-based tools such as DETE CT OR can support these efforts in a non-biased, standardized, rapid, and scalable manner. In fact, we observed that L227R was less efficiently corrected in the HEK293T-L227R-CFTR model (21.0% ± 6.5% for epegRNA-based PE3) compared to the >40% correction efficiency for N1303K-CFTR in the same cell model. Conversely, L227R was more efficiently corrected and rescued in primary rectal organoids and HNE cultures from different donors, whereas N1303K was only moderately corrected. The same observations were made in the primary HNE model, further evidencing the importance of screening in primary, translational models.
+
+For the most efficient epegRNAs and ngRNAs, we investigated the safety profile of our PE approaches through in silico prediction and experimental identification of potential OT sites. GUIDE-seq analysis identified several sites prone to OT Cas9 binding and cleavage. Deep sequencing analysis of PE-treated HEK293T cells at these sites could not reveal any significant PE activity. Also in patient-derived organoids, no OT activity was detected, underscoring previously reported PE safety and fidelity. 12 , 53 , 63 , 64 , 65 Neither plasmid transfection nor triple/quadruple LV transduction are translational delivery strategies, yet they allow us to investigate whether precise gene correction is possible and whether this can rescue CFTR function. Moreover, transduction with LVs driving high-expression cassettes for PE effectors and guides, together with a stable, 2-week exposure, allows us to probe for the specificity of the system, since prolonged exposure is one of the main drivers behind OT activity. 66 The fact that none can be found after 2 weeks of high expression further adds to the already well-documented safety profile of PE. 12 , 53 , 63 , 64 , 65
+
+For severe monogenic disorders caused by relatively common mutations, such as sickle cell disease or common CFTR mutations, the investment in innovative approaches by the pharma industry is obvious or already present. 67 Providing proof-of-principle data on common CFTR variants, such as F508del (first) 51 or N1303K (fourth), the latter exemplified in this study, is therefore important. However, identifying strategies to tackle rare variants might be even more impactful, as, worldwide, hundreds of millions of patients suffer from disorders caused by rare variants. 68 This population includes pwCF with genotypes non-responsive to HEMTs, most of which are rare to ultra-rare (<1%), such as the L227R mutation characterized and tackled in this work. Importantly, these patient groups do not allow for classical clinical trial designs due to the small number of patients for each mutation, urging for alternative trial designs and new criteria for proving efficacy. 69
+
+CRISPR medicines are especially attractive for such rare mutations since, once safe and efficient delivery has been established, only the respective guide RNAs must be switched and evaluated. In fact, one or multiple strategies have already been reported for many of the most common CFTR mutations (listed in Bulcaen and Carlon 51 ). One might envision personalized gene editing pipelines with target-specific guide RNAs to be designed in silico and subjected to automated efficacy and safety analysis using relevant primary models. 70 Such gene therapies could be administered to patients in “n-of-1/low patient numbers” clinical trials. 70 Development of better in silico pegRNA prediction tools further supports such a model by reducing the number of guides requiring experimental testing. 15 , 16 , 17 Notably, since PE rewrites an entire stretch of DNA, a single pegRNA could be used to correct multiple mutations found within the same locus. In fact, the RTT of our L227R and N1303K pegRNAs, for instance, also spans c. 695T>A (V232D) and c.3908del (N1303TfsX25), two other CF-causing variants. Recent PE-derived approaches such as TwinPE and PASTE allow to write or land longer stretches of DNA, extending the use of PE for correcting entire exons or landing a super-exon with a single pair of pegRNAs. 71 , 72
+
+CF modulators already have been paving the road toward an ex - vivo -based approval of therapeutics with a known in-man safety profile: in 2017, the FDA granted a label extension for Kalydeco and in 2020 for Symdeko and Trikafta based on pre-clinical data from Fisher Rat Thyroid cells overexpressing CFTR variants to guide its decision. 73 , 74 Likewise, in Europe, a regulatory pathway has been proposed to leverage the strong correlation between CF organoid and individual patient responses 37 , 75 (reviewed in Mayer-Hamblett et al. 69 ). Individuals with rare CFTR mutations exceeding an a priori response to candidate drugs could then progress to an n-of-1 trial using their own biological materials. These examples not only offer a potential path for regulatory approval for specific CFTR mutations but also represent a precision-based therapy approach toward personalized medicine for CF and beyond.
+
+In conclusion, in this study, we took a step toward a personalized medicine approach by precise gene editing for two CF-causing variants, an ultra-rare (L227R) as well as a more prevalent (N1303K) CFTR mutation. We showed that screening of pegRNA and ngRNA configurations in HEK293T cells allowed us to identify functional guide designs and combinations for efficient correction of the CFTR gene, CFTR glycosylation, PM localization, and function. Importantly, substantial functional correction was obtained in patient-derived rectal organoids and primary AIL cultured HNE cells. With the development of DETE CT OR, an ML algorithm amenable to high-throughput analysis of CFTR functionally corrected organoids, we provide tools for automated screening for genetic strategies to tackle rare CF mutations. Extensive on-target and OT profiling underscores that PE presents high-precision, high-fidelity gene correction even following prolonged and high exposure. In addition, we show that genomic correction levels as low as 1.5% in differentiated primary airway epithelia were sufficient to rescue CFTR chloride currents, further highlighting the potential of gene and prime editing for further investigation toward in-patient testing once optimal delivery vehicles are identified that can circumvent the known CF lung barriers. 76
+
+## Limitations of the study
+
+The current study provides proof of principle for prime editing as a therapeutic strategy for CF but does not tackle the delivery challenge. The human lung naturally presents with several significant barriers that impede straightforward delivery, and the CF lung even more so. 76 In this study, triple or quadruple LVs were used to administer the gene editing cargo to primary cells, a strategy incompatible with therapeutic in-patient gene editing. We evaluated genetic and functional correction in four different models with increasing translatability. In HEK293T-CFTR-overexpressing cells, the level of genetic rescue furthermore correlated well with the level of CFTR protein rescue at the PM, supporting precise gene editing. In primary cell models, however, reliable detection of endogenous CFTR protein expression poses a challenge 77 and hence was not performed in this study. Therefore, at this point, an outstanding question is which exact cell types in a differentiated airway epithelium contributed to the functional correction observed. Finally, we delivered the gene editing machinery to progenitor cell populations before proliferation and differentiation. Future work should thus focus on (1) elucidating the ideal target cell type(s) for therapeutic CF gene editing and (2) combining the developed prime editing approaches with clinically compatible delivery vehicles on fully differentiated airway epithelia, encompassing the apical and basolateral barriers, as they are present in the CF lung.
+
+## STAR★Methods
+
+## Key resources table
+
+| REAGENT or RESOURCE | SOURCE | IDENTIFIER |
+
+| --- | --- | --- |
+
+| Antibodies |  |  |
+
+| Calnexin polyclonal Ab | Thermo Fisher Scientific | PA5-34754; RRID: AB_2552106 |
+
+| CFF CFTR-Ab570 | Cystic Fibrosis Foundation | Ab570 |
+
+| CFF CFTR-Ab596 | Cystic Fibrosis Foundation | Ab596 |
+
+| CFF CFTR-Ab660 | Cystic Fibrosis Foundation | Ab660 |
+
+| Goat anti-mouse Alexa 488 | Thermo Fisher Scientific | A-28175; RRID: AB_2536161 |
+
+| Goat anti-mouse HRP | Agilent | P044701-2; RRID: AB_2617137 |
+
+| Goat anti-rabbit Alexa 633 | Thermo Fisher Scientific | A-21070; RRID: AB_2535731 |
+
+| HA11 | Biolegend | 901515; RRID: AB_2565336 |
+
+| Mouse anti-beta-tubulin | Sigma Aldrich | T7941; RRID: AB_261775 |
+
+| Mouse anti MUC5AC | Abcam | Ab3649; RRID: AB_2146844 |
+
+| Mouse anti-cytokeratin 5 | Leica Biosystems | NCL-L-CK5; RRID: AB_563807 |
+
+| Biological samples |  |  |
+
+| Rectal organoids derived from people with Cystic Fibrosis | KU/UZ Leuven | N/A |
+
+| Human nasal epithelium (HNE) cells | Institut Necker Enfants Malades, KU Leuven | N/A |
+
+| Chemicals, peptides, and recombinant proteins |  |  |
+
+| Lipofectamine 3000 | Thermo Fisher Scientific | L3000008 |
+
+| NuPage Tris-Acetate polyacrylamide gel | Thermo Fisher Scientific | WG1602A |
+
+| Y-27632 | Selleckchem | S0149 |
+
+| Collagen IV | Merck | C7521 |
+
+| Pneumacult™ Ex Plus | StemCell Technologies | 05040 |
+
+| Pneumacult™ ALI | StemCell Technologies | 05001 |
+
+| Forskolin | Sigma | F3917 |
+
+| Critical commercial assays |  |  |
+
+| iProof polymerase kit | BioRad | 1725302 |
+
+| GeneArt Gibson assembly kit | Thermo Fisher Scientific | A46627 |
+
+| P24 INNOTEST® HIV ELISA | Fujirebio | 80563 |
+
+| BCA protein assay kit | Thermo Fisher Scientific | 23225 |
+
+| Trans-Blot Turbo Transfer System | BioRad | 1704150 |
+
+| Illumina Reagent kit V2-150PE | Illumina | V2-150PE |
+
+| NovaSeq 6000 S4 Reagent Kit v1.5 | Illumina | 20028312 |
+
+| Deposited data |  |  |
+
+| GUIDE-seq raw sequencing reads | This paper | https://dataview.ncbi.nlm.nih.gov/object/PRJNA997578 |
+
+| Targeted deep sequencing | This paper | https://dataview.ncbi.nlm.nih.gov/object/PRJNA997578 |
+
+| Experimental models: Cell lines |  |  |
+
+| HEK293T cell lines with single integrated copy of WT/mutant CFTR cDNA with extracellular 3HA-tag | This paper.Ensinck et al.20 | HEK293T-L227R-3HA-CFTR, HEK293T-N1303K-3HA-CFTR, HEK293T-3HA-WT-CFTR |
+
+| Parental 16HBE cells | Milipore | 16HBE |
+
+| 16HBEge | Cystic Fibrosis FoundationValley et al.12 | 16HBEgeN1303K-CFTR |
+
+| HS-YFP engineered 16HBE cell lines | This paper | NA |
+
+| Oligonucleotides |  |  |
+
+| pegRNA and ngRNA designs | This paper | See Table S1 |
+
+| Single-stranded DNA oligos for cloning | IDT | see Table S2 |
+
+| Custom double stranded DNA (gBlock) | IDT | see Table S2 |
+
+| Primers for NGS | IDT | see Table S3 |
+
+| Recombinant DNA |  |  |
+
+| pCMV-PE2 plasmid | Anzalone et al.12 | Addgene: 132777 |
+
+| pCMV-PEmax-P2A-MLH1dn plasmid | Chen et al.26 | Addgene: 174828 |
+
+| pU6-pegRNA-GG-acceptor plasmid | Anzalone et al.12 | Addgene: 132775 |
+
+| pU6-tevopreQ1-GG-acceptor plasmid | Nelson et al.25 | Addgene: 174038 |
+
+| lentiCRISPRv2 plasmid | Sanjana et al. | Addgene: 52961 |
+
+| Lenti-CMV-PE2-IRES-ZeoR plasmid | This paper | Addgene: 207352 |
+
+| HS-eYFP (F46L-H148Q-I152L) plasmid | Galietta et al.78 | N/A |
+
+| Lenti-CMV-PEmax-IRES-ZeoR plasmid | This paper | Addgene: 207353 |
+
+| Lenti-CMV-MLH1dn-IRES-puroR | This paper | Addgene: 207354 |
+
+| Lenti-RNF2-tevopreq1-epegRNA+5G>T_EF1a-puroR | This paper | Addgene: 207355 |
+
+| Lenti-N1303K-tevopreq1-epegRNA+13C>G_EF1a-puro (PBS 14- RTT 18) | This paper | Addgene: 207356 |
+
+| Lenti-L227R-tevopreq1-epegRNA+13C>A_EF1a-puroR (PBS 10 – RTT 19) | This paper | Addgene: 207357 |
+
+| Lenti-RNF2-ngRNA+41_EF1a-puroR | This paper | Addgene: 207358 |
+
+| Lenti-N1303K-ngRNA+14_EF1a-puroR | This paper | Addgene: 207359 |
+
+| Lenti-L227R-ngRNA+15_EF1a-puroR | This paper | Addgene: 207360 |
+
+| Software and algorithms |  |  |
+
+| EditR | Kluesner et al.19 | http://baseeditr.com |
+
+| DETECTOR organoid analysis tool | This paper | https://github.com/RL-arch/detector |
+
+| CRISPOR | Concordet et al.40,42 | http://crispor.tefor.net |
+
+| GUIDE-seq | Tsai et al.42 | https://github.com/aryeelab/guideseq |
+
+| Crispresso2 | Clement et al.79 | http://crispresso2.pinellolab.org/submission |
+
+| Other |  |  |
+
+| Lentiviral vectors | Leuven Viral Vector Core (LVVC) | Custom orders |
+
+| ImageQuant 800 Fluor western blot imager | GE Healthcare | Amersham ImageQuant 800 Fluor |
+
+| Envision multimode plate reader | Perkin Elmer | 2105-0010 |
+
+| Ussing set-up for HNE electrophysiology | World Precision instruments | EVC4000 V/I clamp |
+
+| REAGENT or RESOURCE | SOURCE | IDENTIFIER |
+
+| --- | --- | --- |
+
+| Antibodies |  |  |
+
+| Calnexin polyclonal Ab | Thermo Fisher Scientific | PA5-34754; RRID: AB_2552106 |
+
+| CFF CFTR-Ab570 | Cystic Fibrosis Foundation | Ab570 |
+
+| CFF CFTR-Ab596 | Cystic Fibrosis Foundation | Ab596 |
+
+| CFF CFTR-Ab660 | Cystic Fibrosis Foundation | Ab660 |
+
+| Goat anti-mouse Alexa 488 | Thermo Fisher Scientific | A-28175; RRID: AB_2536161 |
+
+| Goat anti-mouse HRP | Agilent | P044701-2; RRID: AB_2617137 |
+
+| Goat anti-rabbit Alexa 633 | Thermo Fisher Scientific | A-21070; RRID: AB_2535731 |
+
+| HA11 | Biolegend | 901515; RRID: AB_2565336 |
+
+| Mouse anti-beta-tubulin | Sigma Aldrich | T7941; RRID: AB_261775 |
+
+| Mouse anti MUC5AC | Abcam | Ab3649; RRID: AB_2146844 |
+
+| Mouse anti-cytokeratin 5 | Leica Biosystems | NCL-L-CK5; RRID: AB_563807 |
+
+| Biological samples |  |  |
+
+| Rectal organoids derived from people with Cystic Fibrosis | KU/UZ Leuven | N/A |
+
+| Human nasal epithelium (HNE) cells | Institut Necker Enfants Malades, KU Leuven | N/A |
+
+| Chemicals, peptides, and recombinant proteins |  |  |
+
+| Lipofectamine 3000 | Thermo Fisher Scientific | L3000008 |
+
+| NuPage Tris-Acetate polyacrylamide gel | Thermo Fisher Scientific | WG1602A |
+
+| Y-27632 | Selleckchem | S0149 |
+
+| Collagen IV | Merck | C7521 |
+
+| Pneumacult™ Ex Plus | StemCell Technologies | 05040 |
+
+| Pneumacult™ ALI | StemCell Technologies | 05001 |
+
+| Forskolin | Sigma | F3917 |
+
+| Critical commercial assays |  |  |
+
+| iProof polymerase kit | BioRad | 1725302 |
+
+| GeneArt Gibson assembly kit | Thermo Fisher Scientific | A46627 |
+
+| P24 INNOTEST® HIV ELISA | Fujirebio | 80563 |
+
+| BCA protein assay kit | Thermo Fisher Scientific | 23225 |
+
+| Trans-Blot Turbo Transfer System | BioRad | 1704150 |
+
+| Illumina Reagent kit V2-150PE | Illumina | V2-150PE |
+
+| NovaSeq 6000 S4 Reagent Kit v1.5 | Illumina | 20028312 |
+
+| Deposited data |  |  |
+
+| GUIDE-seq raw sequencing reads | This paper | https://dataview.ncbi.nlm.nih.gov/object/PRJNA997578 |
+
+| Targeted deep sequencing | This paper | https://dataview.ncbi.nlm.nih.gov/object/PRJNA997578 |
+
+| Experimental models: Cell lines |  |  |
+
+| HEK293T cell lines with single integrated copy of WT/mutant CFTR cDNA with extracellular 3HA-tag | This paper.Ensinck et al.20 | HEK293T-L227R-3HA-CFTR, HEK293T-N1303K-3HA-CFTR, HEK293T-3HA-WT-CFTR |
+
+| Parental 16HBE cells | Milipore | 16HBE |
+
+| 16HBEge | Cystic Fibrosis FoundationValley et al.12 | 16HBEgeN1303K-CFTR |
+
+| HS-YFP engineered 16HBE cell lines | This paper | NA |
+
+| Oligonucleotides |  |  |
+
+| pegRNA and ngRNA designs | This paper | See Table S1 |
+
+| Single-stranded DNA oligos for cloning | IDT | see Table S2 |
+
+| Custom double stranded DNA (gBlock) | IDT | see Table S2 |
+
+| Primers for NGS | IDT | see Table S3 |
+
+| Recombinant DNA |  |  |
+
+| pCMV-PE2 plasmid | Anzalone et al.12 | Addgene: 132777 |
+
+| pCMV-PEmax-P2A-MLH1dn plasmid | Chen et al.26 | Addgene: 174828 |
+
+| pU6-pegRNA-GG-acceptor plasmid | Anzalone et al.12 | Addgene: 132775 |
+
+| pU6-tevopreQ1-GG-acceptor plasmid | Nelson et al.25 | Addgene: 174038 |
+
+| lentiCRISPRv2 plasmid | Sanjana et al. | Addgene: 52961 |
+
+| Lenti-CMV-PE2-IRES-ZeoR plasmid | This paper | Addgene: 207352 |
+
+| HS-eYFP (F46L-H148Q-I152L) plasmid | Galietta et al.78 | N/A |
+
+| Lenti-CMV-PEmax-IRES-ZeoR plasmid | This paper | Addgene: 207353 |
+
+| Lenti-CMV-MLH1dn-IRES-puroR | This paper | Addgene: 207354 |
+
+| Lenti-RNF2-tevopreq1-epegRNA+5G>T_EF1a-puroR | This paper | Addgene: 207355 |
+
+| Lenti-N1303K-tevopreq1-epegRNA+13C>G_EF1a-puro (PBS 14- RTT 18) | This paper | Addgene: 207356 |
+
+| Lenti-L227R-tevopreq1-epegRNA+13C>A_EF1a-puroR (PBS 10 – RTT 19) | This paper | Addgene: 207357 |
+
+| Lenti-RNF2-ngRNA+41_EF1a-puroR | This paper | Addgene: 207358 |
+
+| Lenti-N1303K-ngRNA+14_EF1a-puroR | This paper | Addgene: 207359 |
+
+| Lenti-L227R-ngRNA+15_EF1a-puroR | This paper | Addgene: 207360 |
+
+| Software and algorithms |  |  |
+
+| EditR | Kluesner et al.19 | http://baseeditr.com |
+
+| DETECTOR organoid analysis tool | This paper | https://github.com/RL-arch/detector |
+
+| CRISPOR | Concordet et al.40,42 | http://crispor.tefor.net |
+
+| GUIDE-seq | Tsai et al.42 | https://github.com/aryeelab/guideseq |
+
+| Crispresso2 | Clement et al.79 | http://crispresso2.pinellolab.org/submission |
+
+| Other |  |  |
+
+| Lentiviral vectors | Leuven Viral Vector Core (LVVC) | Custom orders |
+
+| ImageQuant 800 Fluor western blot imager | GE Healthcare | Amersham ImageQuant 800 Fluor |
+
+| Envision multimode plate reader | Perkin Elmer | 2105-0010 |
+
+| Ussing set-up for HNE electrophysiology | World Precision instruments | EVC4000 V/I clamp |
+
+## Resource availability
+
+## Lead contact
+
+Further information and requests for resources and reagents should be directed to and will be fulfilled by the lead contact, Dr. Marianne Carlon ( marianne.carlon@kuleuven.be ).
+
+## Materials availability
+
+All materials generated during this study are available upon reasonable request and material transfer agreement.
+
+Following plasmids have been deposited to Addgene: lenti-pU6-tevopreq1-L227R-epegRNA+13C>A_EF1a-puro (Addgene: 207357), lenti-pU6-L227R-ngRNA+15_EF1a-puro (Addgene: 207360), lenti-pU6-tevopreq1-N1303K-epegRNA+13C>G_EF1a-puro (Addgene: 207356), lenti-pU6-N1303K-ngRNA+14_EF1a-puro (Addgene: 207359), lenti-pU6-tevopreq1-RNF2-epegRNA+5G>T_EF1a-puro (Addgene: 207355), lenti-pU6-RNF2-ngRNA+41_EF1a-puro (Addgene: 207358), lenti-pCMV-MLH1dn-ires-zeoR (Addgene: 207354), lenti-pCMV-PE2-ires-zeo (Addgene: 207352), lenti-pCMV-PEmax (Addgene: 207353).
+
+## Data and code availability
+
+•GUIDE-Seq and targeted deep sequencing data has been deposited at NCBI-Sequence Read Archive (SRA) and are publicly available as of the date of publication. Accession numbers are listed in the key resources table. Original western blot images are available as supplementary data.•All original code has been deposited at Dataverse and is publicly available as of the date of publication. DOIs are listed in the key resources table.•Any additional information required to reanalyse the data reported in this paper is available from the lead contact upon request.•The DETECTOR tool for automated organoid analysis is freely accessible from Dataverse (https://doi.org/10.7910/DVN/OZZRPG) and Github https://github.com/RL-arch/detector.
+
+## Experimental model and study participant details
+
+## Cell lines
+
+In this work HEK293T and 16HBE cells were engineered and used for readout of CFTR correction and associated rescue in CFTR ion channel function. HEK293T cells were purchased at ATCC (CRL-3216) and originate from a female individual. The engineered HEK293T 3HA-N1303K-CFTR and HEK293T 3HA-WT-CFTR models were described previously. 20 The HEK293T 3HA-L227R-CFTR cell model was generated as part of this study by transducing parental HEK293T cell lines with a lentiviral vector encoding the 3HA-L227R-CFTR cDNA at low MOI and selection for a single integrated copy.
+
+Parental 16HBE14o-cell lines were originally derived from a male individual, described here 39 and were obtained from Millipore ((#SCC150). The Cystic Fibrosis Foundation performed gene editing at the CFTR locus on both alleles of the parental 16HBE14o to obtain isogenic variants (16HBEge) of specific CFTR variants, including N1303K, facilitating CF research 38 ( https://www.cff.org/researchers/cell-model-resources ).
+
+In our studies, we modified these 16HBEge cell lines by stably introducing an HS-YFP sensor to enable functional evaluation of CFTR gene correction. For this purpose, parental 16HBE and 16HBEgeN1303K were transduced with lentiviral vectors encoding the HS-YFP sensor in tandem with a zeocin selection cassette. Following transduction at low MOI, cells were selected for integration of the sensor and used for functional assays. To investigate the effect of MLH1dn on prime editing in 16HBE cells, a double-positive 16HBE cell line was generated following the same procedure using puromycin selection (16HBEgeN1303K_HS-YFP_MLH1dn). Culture conditions are described in the STAR Methods section.
+
+All the derivatives generated from the different parental cell lines are biobanked at KU Leuven with approval by the UZ Leuven ethical committee and biobank services ( S67110 , S67338) and are available upon request.
+
+## Primary cell cultures
+
+Human rectal organoids were generated from rectal biopsies of PwCF as previously described 80 and biobanked following successful culture. Informed consent was obtained prior to biopsy collection, in accordance with the ethical committee of UZ Leuven ( S56329 , S67338). Specifically, biobanked samples from PwCF homozygous or heterozygous for L227R (L227R/L227R, L227R/F508del) or N1303K (N1303K/N1303K, N1303K/F508del, N1303K/3121-1A>G; n = 1 for each) were used for this study.
+
+Human nasal epithelium (HNE) cells from pwCF harboring L227R or N1303K alleles (L227R/L227R, N1303K/N1303K and N1303K/R1162X, n = 1 each) were collected and biobanked as previously described. 55 Written informed consent was obtained from each adult PwCF or parent for those aged 12 to 18 years (AFSSAPS (ANSM) B1005423–40, n° Eudract 2010-A00392-37; CPP IDF2: 2010-05-03-3).
+
+Culture and biobanking conditions are described in the STAR Methods section.
+
+## Method details
+
+## Plasmids
+
+All restriction enzymes used for cloning were ordered from Thermo Fisher Scientific (MA, USA), all primers and custom nucleic acid sequences were ordered from IDT (Belgium). The pCHMWS-3HA-L227R-CFTR-IRES-puro lentiviral (LV) transfer construct was generated via insertion of a L227R- CFTR exon1-8 gBlock sequence ordered from IDT ( Table S1 ) and inserted via XbaI and BsrGI (ER0681 and ER0931) digestion into the pCHMWS-EC3HA-WT-CFTR described previously 20 using T4 ligase (EL0016, Thermo Fisher Scientific, MA, USA). The pCMV-PE2 (Addgene: 32775), pCMV-PEmax-P2A-MLH1dn (Addgene: 174828), pU6-pegRNA-GG-acceptor (Addgene: 132777) and pU6-tevopreQ1-GG-acceptor (Addgene: 174038) plasmids were kind gifts of David Liu. (e)pegRNA spacer, scaffold and 3′ extension sequences were ordered as single stranded oligodeoxynucleotides (ssODNs) ( Table S2 ), annealed and ligated into pegRNA and epegRNA acceptor plasmids via Golden Gate assembly as described in Anzalone et al. 12 and Nelson et al. 25 For pU6-ngRNA constructs, spacer sequences were ordered as compatible ssODNs ( Table S2 ), annealed and ligated using T4 ligase into a BpiI (ER1011)-restricted backbone containing hU6 promoter and Sp Cas9 single guide (sgRNA) scaffold. For the generation of the pCHMWS-PE2-ires-zeo lenti-transfer construct, PE2 was amplified using iProof polymerase (#1725302, BioRad, CA, USA) from pCMV-PE2 via PCR primers with XbaI and BsrGI sites attached to the 5′ ends ( Table S2 ). The amplified insert was ligated into an LV backbone using XbaI and BsrGI. Cloning of a similar LV-PEmax construct was ordered from Genscript (NJ, USA). To obtain a pU6-ngRNA landing construct compatible with lentiviral vector production, the SpCas9 coding sequence from lentiCRISPRv2 (gift from Feng Zhang, Addgene: 52961) was removed via digestion with XbaI and BamHI (ER0681 and ER0051) followed by T4 ligase-mediated ligation of a custom adaptor ( Table S2 ). This construct was subsequently used to clone LV-pU6-ngRNA_EF1a-puro constructs via Esp3I (ER0451) digestion and T4 ligase ligation. To generate an LV-pU6-pegRNA_EF1a-puro LV-transfer constructs, the pU6-ngRNA cassette of LV-pU6-RNF2-ngRNA_EF1a-puro was interchanged with the pU6-pegRNA cassette from pU6-pegRNA-GG-acceptor via iProof PCR-amplification using primers containing NheI (ER0971) restriction sites ( Table S2 ). Once generated this construct allows straightforward insertion of any pegRNA/epegRNA cloned in the backbones from the Liu lab using KpnI (ER0521). The pCHMWS-HS-YFP-ires-zeo construct was cloned via insertion of a custom HS-YFP-ires-zeo gene Block ( Table S2 ) in the pCHMWS-3HA-CFTR-ires-puro backbone via MluI/XbaI digestion (ER0561/ER068). MLH1dn was amplified from pCMV-PEmax-P2A-MLH1dn and cloned into pCHMWS-YFP-ires-zeo backbone using custom primers ( Table S2 ) and Gibson assembly (GeneArt kit, A46627 , Fisher Thermo Scientific, MA, USA).
+
+## Viral vector production
+
+Serum-free viral vectors were ordered from Leuven Viral Vector Core and produced as previously described. 81 In short, HEK293T cells were seeded in five 10 cm diameter petri dishes (353003, BD Biosciences, CA, USA) and triple transfected with the LV transfer plasmids described above, the packaging plasmid (pCMVΔR8.91) and a VSV-G envelope plasmid using linear polyethylenimine (23966-1, PEI, Polysciences Europe, Germany). Supernatant containing lentiviral particles was harvested 48h and 72h post transfection and filtered through a 0.45μm pore-size filter (SLHA033SS, Merck Milipore, MA, USA). The viral vector titer was determined via p24 INNOTEST HIV ELISA (80563, Fujirebio, Belgium). The resulting lentiviral vectors are referred to as LV.
+
+## Cell lines and transfection
+
+HEK293T NT cells and HEK293T cells stably expressing 3HA-WT-CFTR, 3HA-L227R and 3HA-N1303K-CFTR were cultured in Dulbecco’s modified Eagle’s medium (DMEM, 61965026, Gibco, MA, USA) supplemented with 8% FBS and 50μg/mL gentamicin (15750045, Thermo Fisher Scientific, MA, USA). WT or mutant expressing HEK293T cell lines were kept on 2 μg/mL puromycin and passaged every 2/3 days using Trypsin-EDTA 0.25% phenol red (25200056, Gibco, MA, USA). For transfection, 250.000 cells were seeded in 24 well plates (734–2325, VWR, PA, USA) in 1 mL DMEM +8%FBS + gentamicin medium. 24 h after cell seeding, transfection mixes were made by complexing 750 ng PE plasmid +250 ng (e)pegRNA plasmid +83 ng ngRNA plasmid with 3 μL Lipofectamine 3000 and 1 μL P3000 Reagent (L3000008, Thermo Fisher Scientific, MA, USA). Both the plasmids and transfection reagents were dissolved in 50 μL Opti-MEM, subsequently pipetted together and allowed to form complexes for 10 min at room temperature. Afterward, 0.5 mL culture medium was removed, and transfection mixes were carefully added. For HS-YFP assays following plasmid ratios were used: 100 ng HS-YFP (F46L-H148Q-I152L) + 675 ng PE + 225 ng (e)pegRNA +75 ng ngRNA. Transfected cells were split to 6 well plates (734–0991, VWR, PA, USA) 24 h post transfection and harvested 72h after transfection using 0.25% Trypsin/EDTA.
+
+16HBE cells were cultured using MEM (11095-072, Gibco, MA, USA) supplemented with 10% FBS and gentamicin (50 μg/mL). Culture flasks were coated with following solution for >2h at 37°C: 48 mL LHC-8 basal medium (12677-027, Gibco, CA, USA), 67 μL Bovine serum albumin fraction V 7.5% (15260-037, Gibco, CA, USA), 500 μL PureCol (3 mg/mL, 5005-100mL, Advanced BioMatrix, CA, USA), 500 μL fibronectin from human plasma (1 mg/mL, 33016-015, Thermo Fisher Scientific, MA, USA). Medium was replaced every 2/3 days and cells were passaged once a week.
+
+## Generation of HEK293T and 16HBE cell lines
+
+HEK293T cells stably expressing 3HA-N1303K-CFTR and 3HA-WT-CFTR have been previously generated and characterized. 13 , 20 , 82 The 3HA-L227R HEK293T cell line was generated via LV transduction with vectors generated from the pCHMWS-3HA-L227R-CFTR-ires-puro. HEK293T cells were transduced with a 1/3 serial vector dilution and selected using puromycin (2 μg/mL, ant-pr-1, Invivogen, CA, USA) to obtain a single integrated copy stable cell line.
+
+HS-YFP-expressing 16HBE cell lines were generated via transduction with 1/3 dilution series of LV-CMV-HS-YFP-IRES-ZeoR vector followed by selection for a single integrated copy with zeocin (100 μg/mL, ant-zn-5b, Invivogen, CA, USA).
+
+## DNA extraction and sanger sequencing
+
+For readout of prime editing at the DNA level, Sanger sequencing and EditR software 19 were used, unless mentioned otherwise. Genomic DNA extraction was performed using GenElute Mammalian Genomic DNA miniprep Kit (G1N70-1KT, Sigma, MO, USA) according to the manufacturer’s guidelines and stored at −20°C until further use. For organoid and differentiated HNE samples QuickExtract DNA extraction Lucigen (ImmunoSource, QE9050, Belgium) and DNeasy Blood & Tissue Kit (Qiagen, 69506, Germany) were respectively used.
+
+For Sanger sequencing, 400–600 base pairs around the mutation were amplified using Taq DNA polymerase (EP0404, Thermo Fisher Scientific, MA, USA) PCR with specific primers ( Table S4 ) and purified using GenElute PCR Clean-up kit (NA1020-1KT, Sigma, MO, USA). Sanger sequencing was performed by LGC Genomics (Germany). For calculating editing efficiency, unprocessed.abi sequencing chromatograms were analyzed using EditR software 19 for graphical representation, polished reads (provided by LGC) were used unless specified otherwise.
+
+## RNA extraction and quantitative PCR
+
+RNA was extracted from cell or organoid pellets using Aurum total RNA kit (7326820, Bio-Rad, CA, USA) and 1 μg of RNA was converted to cDNA using High Capacity cDNA Reverse Transcription kit (4368813, Thermo Fisher Scientific, MA, USA) following manufacturer’s guidelines. For quantitative PCR qPCR), a LightCycler 480 SYBR Green I Master mix (4707516001, Roche Diagnostics, Belgium) containing 0.333 μM of each primer. γ-actin was used as internal control and housekeeping gene. Primer sequences are listed in Table S3 . All samples were measured in triplicate of at least three biological repeats. Following PCR program was used: 95°C (10 min) – 50x [95°C (10 s) – 55°C (30 s)]. For data analysis iQ5 Optical System Software (Bio-Rad, Belgium) was used.
+
+## Immunocytochemistry
+
+PM staining was performed as described previously. 20 For flow cytometry, cells were harvested 72 h post transfection, centrifuged at 300xg for 5 min, washed with 200 μL stain buffer (PBS - 5% FBS), centrifuged again and incubated with HA11 antibody (1:1000, #901515, Biolegend, San Diego, CA, USA) on ice for 40 min. Afterward cells were spun down, washed with 200 μL stain buffer and fixed with 100 μL ICC Fixation buffer (#00-8222-49, eBioscience, Waltham, MA, USA) for 20 min on ice. Next, 100 μL stain buffer was added, cells were spun down and washed again with 200 μL stain buffer. 50 μL secondary antibody (goat anti-mouse Alexa 488, 1:500, #A-28175, Thermo Fisher, MA, USA) was added and incubated for 30 min at room temperature. Cells were spun down, washed with 200 μL stain buffer and resuspended in 100 μL PBS for flow cytometry analysis on Guava easyCyte HT (Merck Milipore, New Jersey, USA). Percentages of PM-CFTR corrected cells were determined based on gates on the HEK293T-NT population. Since HEK293T-N1303K cells display a residual PM expression, restoration to a strong PM expression phenotype was analyzed using a “high-positive” gate, which was based on non-transfected HEK293T-N1303K cells. For both mutations, percentage of positive cells were compared with the percentage of positive cells in the respective gates of HEK293T-WT conditions ( Figure S2 H).
+
+For confocal microscopy, cells were collected 24 h post transfection and seeded in 1 cm 2 , poly-D-lysine (#P6407, Merck, New Jersey, USA) coated, glass-bottomed chambers (80826, Ibidi, Germany), grown for 48 h and subsequently stained for 3HA-CFTR using mouse HA11 and rabbit anti-calnexin (1:1000, #PA5-34754, Thermo Fisher Scientific, MA, USA) primary antibodies. For detection, goat- anti -mouse Alexa 488 (1:500, #A-28175, Thermo Fisher Scientific, MA, USA) and goat anti-rabbit Alexa 633 (1:500, #A-21070, Thermo Fischer Scientific, MA, USA) were respectively used as secondary antibodies. Nuclei were stained with DAPI (4′,6-diamidino-2-fenylindole, 1:2000, #D136, Thermo Fischer Scientific, MA, USA). Imaging was performed using Zeiss LSM 880 Airyscan confocal microscope and Zen 3.1 software.
+
+## Halide sensitive (HS) YFP quenching assay
+
+The HS-YFP quenching assay was performed using a previously published HS-YFP construct 78 and protocol 20 with minor adaptations. Briefly, HEK293T cells were harvested 24 h post transfection and seeded in clear-bottomed 96-well plates coated with Poly-D-Lysine (P6407, Sigma, MO, USA) with a cell density of 140.000 cells per well. Transduced 16HBE cells were seeded at 30.000 cells per well in MEM +10%FBS and grown for 48 h. Cells were washed twice with DPBS supplemented with Ca 2+ and Mg 2+ (14040091, Thermo Fischer Scientific, MA, USA) and exposed to 10 μM forskolin (#F3917, Sigma, MO, USA) in 40 μL DMEM +2% FBS for 20 min. Fluorescence was measured using an Envision multimode plate reader (2105-0010, PerkinElmer, Zaventem, Belgium) for 5 s before and 7 s (HEK293T) or 30 s (16HBE) after I − buffer (137 mM NaI, 2.7 mM KI, 1.7 mM KH 2 PO 4 , 10.1 mM Na 2 HPO 4 , 5 mM D-glucose, Sigma, MO, USA) was injected. CFTR function relative to WT and measured by HS-YFP quenching was determined as 1-F/F 0 .
+
+## Western blot
+
+HEK293T protein samples for western Blot analysis were collected 72 h post transfection. Culture medium was aspirated, cells were washed with 1 mL PBS and lysed with 1% sodium dodecyl sulfate (SDS, 05030-2.5L-F, Merck Life Sciences, Germany) in PBS containing complete protease inhibitor (cat# 11873580001, Roche, Switzerland). Cell lysates were mechanically homogenized using 1mL needles (LBTV1E, Merck Life Sciences, Germany). To assure equal loading, protein concentrations were measured using the bicinchoninic acid assay (BCA protein assay kit, 23225, Thermo Fisher Scientific, MA, USA) and spectral readout at 540 nm via Anthos 2010 Microplate reader. Loading dye, consisting of 200 mM Tris-HCl (RES3098T-B103X, Sigma, MO, USA), 400 mM dithiothreitol (GE17-1318-02, Sigma, MO, USA), 8% SDS, 40% glycerol and 0.5% bromophenol blue (B7021, Sigma, MO, USA) was added to 15 μg of protein. The samples were incubated at 37°C for 15 min. Polyacrylamide gel electrophoresis (PAGE) was run on a 3–8% Tris-Acetate polyacrylamide gel (NuPage, WG1602A, Thermo Fisher, MA, USA) for 50 min at 150V with Tris-Acetate SDS 1x running buffer (215682500, Thermo Fisher Scientific, MA, USA). PageRuler protein ladder (26616, Thermo Fisher Scientific, MA, USA) was included to estimate protein sizes. After PAGE, the gel was blotted on a methanol activated (20846.361, VWR, PA, USA) polyvinylidene difluoride membrane (PVDF, Trans-Blot, Turbo RTA Midi PVDF Transfer Kit, 1704273, Bio-Rad, CA, USA) using Trans-Blot Turbo Transfer System (1704150, BioRad, CA, USA) for 15 min at 2.5 A. The membrane was blocked using 5% milk powder in 0.1% Triton/PBS for 30 min and followed by overnight incubation with primary antibodies against the hemagglutinin tag (HA11, 1:1000), against CFTR (1:1000, CFF Ab mix 570 + 596+660) and against α-tubulin (1/2000, Sigma, MO, USA). Next, the PVDF membranes were washed three times with 0.1% Triton/PBS for 10 min before incubation with secondary goat- anti -mouse horseradish peroxidase conjugated antibodies (1:10.000, P044701-2, Agilent, CA, USA) for 1h at room temperature. After washing three times, the blot was imaged using Clarity Western ECL substrate (#1705061, Bio-Rad, CA, USA) and Amersham ImageQuant 800 Fluor (GE Healthcare, IL, USA). Raw, unprocessed blots are shown in Figure S10 . The relative amount of band C on western blots was quantified using ImageQuant TL software (GE Healthcare, IL, USA) and expressed as the intensity of band C/(band B + band C).
+
+## Rectal organoid transduction and forskolin induced swelling (FIS) assay
+
+Human rectal organoids were generated from rectal biopsies of PwCF as previously described 80 and biobanked following successful culture. Informed consent was obtained prior to biopsy collection, in accordance with the ethical committee of UZ Leuven ( S56329 , S67338). Specifically, biobanked samples from PwCF homozygous or heterozygous for L227R (L227R/L227R, L227R/F508del) or N1303K (N1303K/N1303K, N1303K/F508del, N1303K/3121-1A>G) were used for this study.
+
+For transduction, organoids were trypsinized to single cell using Trypsin 0.25% EDT for 10 min at 37°C. 15.000 cells were resuspended with 25 μL lentiviral vector mix and incubated for 10 min at room temperature, as described previously. 33 Next, the cell-vector suspension was embedded in 25 μL ice-thawed Matrigel (356231, Corning, New York, USA) which was used to plate 5 μL droplets in 96 well plates in octuplicate for each condition. 80 Matrigel domes were allowed to polymerize for 10 min at 37°C and subsequently submerged in human medium supplemented with Rock inhibitor (Y-27632, #S0149, Selleckchem, TX, USA) for the first three days to allow outgrowth from single stem cells. Organoids were allowed to grow for fourteen days. For FIS, medium was changed every 2–3 days. Organoid medium was replaced by medium containing 5 μM Forskolin 14 days after transduction. Organoid swelling was immediately monitored by live, label-free imaging (LSM800, Zeiss, Germany) at 37°C and 5% CO 2 as described previously. 13 Images were taken every 10 min over the course of 2 h.
+
+## Machine learning algorithms for automated FIS analysis
+
+DETE CT OR ( De tection of T argeted E diting of CFTR in Or ganoids) consists of machine-learning (ML) models trained to perform two tasks: 1) identify the total number of organoids in a given plane and 2) analyze their swelling properties between two images taken during a time course experiment. For the first model, an algorithm previously used for dense people crowd counting tasks was adopted (Bayesian Crowd Counting). 83 , 84 , 85 LabelMe software 86 was used to annotate 18.499 organoids (116 8-bit brightfield images). The images presented with different organoid genotypes, sizes, amount of overlap, focus and swelling. A VGG19 model 87 learned the organoid phenotypes’ prior information using the Gaussian kernel with density map and Bayesian loss function to estimate the background likelihood. 88 The algorithm estimates the position of each organoid condition independently so that the total number of organoids is calculated accurately, overcoming the interference of overlapping.
+
+For the second task, to detect the swelling of the identified organoids, the YOLOv7 algorithm 89 was used. To extract the dynamic behaviors, single time frame sequences were preprocessed (with shadow removal and filtering) and subjected to frame differencing ( Figure S5 A). Based on organoid swelling movies, 4.093 organoids were labeled on 113 frame differencing images. These were subsequently used to train a YOLOv7-E6E model. 89 Taking expert-labelled images as ground truth, we evaluated the first task with Mean Absolute Error (MAE) and Mean Squared Error (MSE); and the second task with Average Precision at the intersection over union threshold 0.5 (AP 50 ). To test the time performance, we locally deployed the whole program with two trained ML models. We processed the analysis of a 96 well plate experiment with images taken every 10 min for 2 h (=1152 brightfield images 512 x 512 pixels). On a workstation (Intel Core 13900K CPU, single Nvidia RTX 3090 GPU) the complete analysis took 39s. Code, trained models and guidelines to run DETE CT OR have been deposited to Dataverse ( https://doi.org/10.7910/DVN/OZZRPG ) and Github ( https://github.com/RL-arch/detector ).
+
+## Primary nasal epithelial cell culture
+
+Human nasal epithelium (HNE) cells from pwCF harboring L227R or N1303K alleles (L227R/L227R and N1303K/R1162X, n = 1 each) were collected and biobanked as previously described. 55 Written informed consent was obtained from each adult PwCF or parent for those aged 12 to 18 years (AFSSAPS (ANSM) B1005423–40, n° Eudract 2010-A00392-37; CPP IDF2: 2010-05-03-3). HNE cells were thawed and cultured using collagen IV coated flasks (C7521, Merck, New Jersey, USA) and commercial expansion medium (Pneumacult-Ex Plus, #05040, StemCell Technologies, Canada). At passage 3, 100.000 cells were transduced in suspension for 10 min at room temperature with 50 μL LV vector mixes containing equal titers of LV-PE2 + LV-epegRNA + LV-ngRNA (PE3) or LV-PE2 + LV-epegRNA + LV-ngRNA + MLH1dn (PE5). Immediately after transduction, cells were seeded on collagen IV coated 0.4 μm pore transwells (Corning 6.5 mm polyester, #3470, Fisher Scientific, MA, USA) and expansion medium was added to both compartments. Cells were cultured in submerged mode for 2–4 days at 37°C and 5% CO 2 . When complete confluency was reached, HNEs were put on air-liquid interface (ALI) by removing the apical medium and switching to differentiation medium (Pneumacult, 05001, StemCell Technologies, Canada) for the basolateral compartment. After three weeks, HNE monolayers achieved full differentiation as evidenced by mucus secretion and mucociliary beating.
+
+## Ussing chamber measurements
+
+For short-circuit current (I sc ), transwells containing differentiated HNE monolayers were inserted into an Ussing device (EVC4000 Precision V/I Clamp, World Precision instruments; Labchart v8.1 software, ADInstruments) with chloride gradient between both chambers. Ussing measurement was performed as previously described 55 with identical buffer compositions. All compounds were acquired from Merck (Fallavier, France) and dissolved in DMSO before frozen storage. After stabilisation of baseline I sc , 100 μM amiloride was added to inhibit apical sodium absorption by epithelial Na + channel (ENaC). CFTR activation was apically and basolaterally stimulated using cAMP-agonists forskolin (10 μM) and 3-isobutyl-1-methylxanthine (IBMX, 100 μM). Upon stable baseline, 10 μM Inh172 a specific CFTR-inhibitor was added to the apical side to investigate CFTR-specific currents. Lastly, 100 μM ATP was applied to induce purinergic calcium-dependent chloride secretion as indication for epithelial integrity and viability.
+
+## Histological staining
+
+The HNE monolayers were fixed with 4% paraformaldehyde (1.04003.1000, Sigma Aldrich, MI, USA) and embedded in paraffin. 5μm sections were cut and mounted on Superfrost Plus slides (J1800AMNZ, Thermo Fisher Scientific, MA, USA) and stained with either hematoxylin and eosin (Abcam ab245880) or Periodic Acid-Schiff stain (395B, Sigma Aldrich, MI, USA) according to manufacturer’s protocol. After staining, the slides were covered with DPX (06522, Sigma Aldrich, MI, USA) and a glass coverslip (630–2603, VRW, PA, USA). Brightfield images ware taken using the Leica DM6B (DFC7000T) microscope.
+
+## Immunofluorescence staining
+
+After deparaffinization with xylene (534056, Merck Life Science, New Jersey, USA) and 100% ethanol (VWR 85823360), antigen retrieval was performed by cooking the 5μm paraffin sections for 20 min in HIER buffer ( AB208572 , Abcam). First, the slides were subjected to peroxidase quenching by incubation in 0.3% H 2 O 2 (CL00.2306.1000, Chem-Lab) in PBS for 15 min at RT, then blocked for 1h in 10% Goat serum (S26, Merck Life Science) in PBS. Afterward, the slides were incubated overnight at 4°C with primary antibodies (diluted in blocking solution) targeting the different epithelial cell-markers: mouse anti-beta-tubulin (T7941; 1/4000 diluted, Sigma Aldrich, MI, USA), Mouse –anti-MUC5AC (ab3649; 1/1600 diluted, Abcam) and Mouse –anti-Cytokeratin 5 (NCL-L-CK5; 1/500 diluted, Leica Biosystems). Sections were incubated for 1h at RT with Goat- anti -Mouse HRP secondary antibody (P0447; 1/200 diluted, Agilent) followed by incubation for 10 min at RT with fluorescent CF 647 dye (96022, Biotium, CA, USA) diluted 1/200 in 100 mM borate buffer (Fisher Scientific J63742.AK) + 0.003% H 2 O 2 . Finally, the sections were stained with 1μg/μL DAPI solution (D1306, Life Technologies) diluted 1/4000 in PBS. Conventional immunofluorescent staining was used to visualise uteroglobin: after antigen retrieval, the slides were incubated overnight at 4°C with rat- anti -uteroglobin (MAB4218; 15μg/ml diluted in blocking buffer, R&D Systems) followed by incubation with Goat-anti rat Alexa 555 secondary antibody for 1h at RT (A21434; 1/1000 diluted in blocking buffer, Invitrogen). Finally, the sections were stained with 1μg/μL DAPI solution diluted 1/4000 in PBS and mounted with mowiol and a glass coverslip. Fluorescent images were taken using the Leica DM6B (DFC7000T) microscope.
+
+## In silico prediction of potential off-targets
+
+For in silico identification of off-target (OT) sites, CRISPOR 40 was used. CRISPOR is an online available tool ( http://crispor.tefor.net ) that leverages the Doench and Moreno-Mateos models that were trained on large experimental datasets to estimate sites with increased propensity for SpCas9 OT activity. 41 Spacer sequences of optimized pegRNAs and ngRNAs with their respective full PAMs were give as input, Sp Cas9 was selected as nuclease and “Homo Sapiens – UCSC Dec. 2013 (GRCh38/hg38) + SNPs: dbSNP148, Kaviar” was used as reference genome. Identified sites with sequence similarity were downloaded and ranked based on Cutting Frequency Determination score. 41
+
+## Experimental identification of potential off-targets via GUIDE-Seq
+
+Genome-wide, Unbiased Identification of DSBs Enabled by Sequencing (GUIDE-Seq) was performed as previously described. 33 In short, HEK293 cells were transfected with 500 ng of Sp Cas9 plasmid (pX-Cas9 90 ), 250 ng of L227R-CFT/N1303K-CFTR pegRNA/ngRNA plasmid, 10 pmol of double-stranded oligodeoxynucleotides (dsODNs) and 50 ng pEGFP-IRES-puro plasmid using Lipofectamine 3000 (L3000008, Thermo Fisher Scientific, MA, USA). 24h after transfection, cells were split and selected with puromycin. Genomic DNA was extracted (DNeasy Blood and Tissue kit, #69506, Qiagen, Hilden, Germany) and sheard to average length of 500 bp using sonication (Focused-ultrasonicator, Covaris, MA, USA). End-repair and sequencing adaptor ligation were performed using NEBNext Ultra End Repair/dA Tailing Module (E7546S, New England Biolabs, MA, USA) and NEBNextUltra Ligation module (E7595S, New England Biolabs, MA, USA) respectively following the procedures reported by Nobles et al. 91 Amplification was performed as described by Tsai et al. 42 and libraries were quantified using Qubit dsDNA High Sensitivity Assay kit ( Q33233 , Thermo Fisher Scientific, MA, USA). Next-generation sequencing was performed on an Illumina MiSeq sequencing device using Illumina Reagent kit V2-150PE.
+
+Raw sequencing data were processed and analyzed using the GUIDE-Seq (v1.0.2) command line utilities. 42 In short, files were demultiplexed and umi (unique molecular identifier) tagged. PCR duplicates were identified and consolidated, reads were aligned to GrCh38 using BWA-MEM. When dsODNs integrations were identified, the genomic region was retained as off-target cleavage site if at least 13 base pairs matched with the spacer of the pegRNA or ngRNA and if absent in the background control. Raw sequencing reads have been submitted to NCBI-SRA.
+
+## Targeted deep sequencing
+
+For evaluation of potential OT activity, genomic DNA was extracted from HEK293T cells three days post transfection with PE plasmids or from patient-derived organoids fourteen days post transduction. For these samples GenElute Mammalian Genomic DNA miniprep Kit (G1N70-1KT, Sigma, MO, USA) and Lucigen Quickextract (QE09050, Immunosource, Schilde, Belgium) kits were used respectively.
+
+Loci identified as potential off-targets either via in silico prediction or via experimental identification by GUIDE-Seq were PCR-amplified using iProof High-Fidelity polymerase (#172–5302, Bio-Rad, CA, USA) and adaptor-containing primers ( Table S3 ). PCR amplicons were purified using Ampure XP beads (A63881, Analis, Belgium) and 1.2 sample-beads ratio. Qubit (High Sensitivity kit, 10616763, Fisher Scientific) was used to measure DNA concentration. Indexing PCR was performed with Phusion High Fidelity PCR master Mix with HF buffer (M0531S, Bioké), followed by Ampure bead purification. Fragment Analyzer (NGS Fragment High Sensitivity Analysis Kit 1–6000 bp, DNF-474-500, Agilent) was used before and after indexing PCR to confirm fragment length. Amplicon molarities were determined via qPCR (Kapa SYBR FAST Universal qPCR kit + Primer premix + Illumina DNA standards, 7960140001/CM7079, Roche, Basel, Switzerland) and sequenced using NovaSeq 6000 S4 Reagent Kit v1.5 (300 cycles; 20028312, Illumina, SA, USA).
+
+Samples were sequenced on a NovaSeq 6000 (Illumina, CA, USA), 150 cycles (150 bp paired-end). Raw sequencing data were analyzed using command-line utilities of CRISPResso2 (v2.2.7) 79 in batch mode (CRISPRessoBatch) with following settings: --plot_window_size 1 --amas 50 --default_min_aln_score 50 -s 10 -q 10 --exclude_bp_from_left 5 --exclude_bp_from_right 5. A number of sites picked up by GUIDE-seq corresponded to (semi)repetitive regions in the genome that led to convoluted amplicons. Amplicons mapping to the originally identified genomic coordinates were separated using the CRISPRessoPooled pipeline preceding submission to CRISPRessoBatch. The full batch files for analysis at expected DSB and PE sites can be found in Tables S5 and S6 . Raw sequencing reads have been submitted to NCBI-SRA.
+
+## Quantification and statistical analysis
+
+Statistical analyses were performed using GraphPad (Prism9). Parametrical, unpaired/unpaired Student’s t test (with/without Welch’s correction), Mann-Whitney U t-test or one-way ANOVA with Sidak’s correction for multiple comparison and Tukey’s multiple comparison test were used to analyze differences between experimental conditions. Two-sided tests were used unless otherwise specified. Pearson or Spearman correlation were used to investigate the relation between genomic and protein/function level readouts. Results are shown as mean ± standard deviation. p-values were denoted as follows: ∗ ( p < 0.05), ∗∗ ( p < 0.01), ∗∗∗ ( p < 0.001), or ∗∗∗∗ ( p < 0.0001). Test specifications are mentioned in figure legends. Datapoints on graphs depict biological repeats.

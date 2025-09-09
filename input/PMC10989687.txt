@@ -1,0 +1,13 @@
+Title: Prime editing for precise and highly versatile genome manipulation
+
+DOI: 10.1038/s41576-022-00541-1
+
+PMCID: PMC10989687
+
+Abstract 1:
+
+Programmable gene editing tools have transformed the life sciences and have shown potential for the treatment of genetic disease. Among the CRISPR–Cas technologies that can currently make targeted DNA changes in mammalian cells, prime editors offer an unusual combination of versatility, specificity and precision. Prime editors do not require double-strand DNA breaks and can make virtually any substitution, small insertion and small deletion within the DNA of living cells. Prime editing minimally requires a programmable nickase fused to a polymerase enzyme, and an extended guide RNA that both specifies the target site and templates the desired genome edit. In this Review, we summarize prime editing strategies to generate programmed genomic changes, highlight their limitations and recent developments that circumvent these bottlenecks, and discuss applications and future directions.
+
+Abstract 2:
+
+In this Review, Chen and Liu discuss the latest developments in prime editing systems, including improvements to their editing efficiency and capabilities, as well as diverse emerging applications in research and preclinical therapeutic studies.
